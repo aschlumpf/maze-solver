@@ -1,0 +1,32 @@
+@import '../../styles/styles.scss';
+
+$cellSize: 100px;
+
+@mixin hover($color) {
+    &:hover {
+        background-color: $color;
+    }
+}
+
+.cell {
+    cursor: pointer;
+    height: $cellSize;
+    width: $cellSize;
+    border: 1px solid black;
+    &__background {
+        background-color: $white;
+        @include hover($hover-white);
+    }
+    &__non-background {
+        background-color: $red;
+        @include hover($hover-red);
+    }
+    &__path {
+        background-color: $green;
+        @include hover($hover-green);
+    }
+    &__temporary {
+        background-color: $black;
+        @include hover($hover-black);
+    }
+}
